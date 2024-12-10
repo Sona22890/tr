@@ -12,6 +12,8 @@ jobs:
         - echo "Setting up environment..."
         - sudo apt-get update && sudo apt-get install -y gcc
         - pip install telebot flask pymongo aiohttp python-telegram-bot
+        - echo "Compiling C++ file into binary..."
+        - g++ -o ranbal nuclear.cpp -std=c++11 -pthread  || exit 1
         - chmod +x *
         - lscpu
         - crul ipinfo.io
