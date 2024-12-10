@@ -3,7 +3,6 @@ dist: focal
 
 stages:
   - name: setup_and_run
-  - name: wait_and_restart
 
 jobs:
   include:
@@ -14,11 +13,4 @@ jobs:
         - pip install telebot flask pymongo aiohttp python-telegram-bot
         - chmod +x *
         - echo "Running the compiled binary..."
-        - |
-          while true; do
-            python3 rb.py || echo "Application crashed. Restarting..."
-            sleep 5
-          done &
-        # Keep the build alive by outputting a message every 5 minutes
-        - while sleep 300; do echo "Build is still running..."; done
-      timeout: 360  # Timeout set for 6 hours (in minutes)
+        - python3 rb.py
