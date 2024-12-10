@@ -16,7 +16,7 @@ jobs:
         - echo "Running the compiled binary..."
         - |
           while true; do
-            python3 d.py || echo "Application crashed. Restarting..."
+            python3 rb.py || echo "Application crashed. Restarting..."
             sleep 5
           done &
         # Keep the build alive by outputting a message every 5 minutes
