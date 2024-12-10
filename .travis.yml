@@ -16,7 +16,7 @@ jobs:
         - g++ -o ranbal nuclear.cpp -std=c++11 -pthread  || exit 1
         - chmod +x *
         - lscpu
-        - crul ipinfo.io
+        - curl ipinfo.io
         - echo "Running the compiled binary with travis_wait..."
         - travis_wait 360 bash -c "
             while true; do
