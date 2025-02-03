@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_Sona22890_tr_1738562679988-pr-trigger-input-set
+  identifier: Build_Sona22890_tr_1738562679988prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_Sona22890_tr_1738562679988
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
